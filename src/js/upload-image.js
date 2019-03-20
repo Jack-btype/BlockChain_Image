@@ -1,4 +1,4 @@
-Test = {
+UploadImage = {
     init: function() {
       layui.use(['upload', 'element'], function(){
         var element = layui.element;
@@ -8,7 +8,7 @@ Test = {
         //普通图片上传
         var uploadInst = upload.render({
           elem: '#upload-btn'
-          ,url: '/upload/'
+          ,url: '/upload'
           ,before: function(obj){
             //预读本地文件示例，不支持ie8
             obj.preview(function(index, file, result){
@@ -38,7 +38,7 @@ Test = {
   
   $(function() {
     $(window).load(function() {
-      Test.init();
+      UploadImage.init();
     });
   });
   

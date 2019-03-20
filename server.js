@@ -17,6 +17,26 @@ var ExpressApp = {
             res.sendFile( __dirname + '/src/' + 'index.html');
         })
 
+        app.post('/upload', function(req, res) {
+    
+            console.log(req.files[0]);
+        
+            var des_file = __dirname + "/imgUpload/" + req.files[0].originalname;
+            fs.readFile( req.files[0].path, function(err, data) {
+                fs.writeFile(des_file, data, function(err) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        response = {
+                            message: 'File uploaded successfully',
+                            filename: req.files[0].originalname
+                        };
+                    }
+                    console.log( response );
+                    res.end( JSON.stringify( response ) );
+                });
+            });
+        });
         var server = app.listen(7777, function() {
 
             var host = server.address().address;
@@ -24,6 +44,10 @@ var ExpressApp = {
 
             console.log("服务器运行在： http://%s:%s", host, port)
         })
+    },
+
+    post: function() {
+
     }
 
 }

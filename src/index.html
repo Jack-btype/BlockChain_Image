@@ -27,13 +27,11 @@
         </ul>
         <div class="layui-tab-content">
           <div class="layui-tab-item layui-show">
-            <div class="layui-upload">
-              <button type="button" class="layui-btn" id="upload-btn">上传d图片</button>
-              <div class="layui-upload-list">
-                <img class="layui-upload-img" id="imageShow">
-                <p id="hintText"></p>
-              </div>
-            </div>   
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+              <input type="file" name="image" size=50 />
+              <br />
+              <input type="submit" value="上传文件" />
+            </form>
           </div>
           <div class="layui-tab-item">
             <form class="layui-form" action="">
@@ -90,7 +88,7 @@
     <script src="js/web3.min.js"></script>
     <script src="js/truffle-contract.js"></script>
     <script src="layui/layui.js"></script>
-    <script src="js/test.js"></script>
+    <script src="js/upload-image.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
