@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Painting Shop</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/myType.css" rel="stylesheet">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+      <div class="layui-tab">
+        <ul class="layui-tab-title">
+          <li class="layui-this">上传图片</li>
+          <li>查找图片</li>
+          <li>购买图片</li>
+        </ul>
+        <div class="layui-tab-content">
+          <div class="layui-tab-item layui-show">
+            <div class="layui-upload">
+              <button type="button" class="layui-btn" id="upload-btn">上传d图片</button>
+              <div class="layui-upload-list">
+                <img class="layui-upload-img" id="imageShow">
+                <p id="hintText"></p>
+              </div>
+            </div>   
+          </div>
+          <div class="layui-tab-item">
+            <form class="layui-form" action="">
+              <div class="layui-form-item">
+                <label class="layui-form-label">输入框</label>
+                <div class="layui-input-block">
+                  <input type="text" name="title" required  lay-verify="required" placeholder="请输入图片名称" autocomplete="off" class="layui-input">
+                </div>
+              </div>
+            </form>
+            <button type="button" class="layui-btn" id="search-btn">查找图片</button>
+          </div>
+          <div class="layui-tab-item">显示图片列表，每个图片下方有一个点击按钮</div>
+        </div>
+      </div>
+      
+
+      <!--
+
+      <div id="imageShow">
+        <img id="toShow" src="images/0.jpg" alt="defaultImage">
+        <input id="click" type="file">
+      </div>
+      <button id="upload" onclick="$('#click').click()">UpLoad</button>
+      <button id="search">search </button>
+
+      -->
+        <!-- PETS LOAD HERE -->
+      </div>
+    </div>
+    <!--
+    <div id="paintingsTemplate" style="display: none;">
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="panel panel-default panel-painting">
+          <div class="panel-heading">
+            <h3 class="panel-title">蒙娜丽莎</h3>
+          </div>
+          <div class="panel-body">
+            <img class="img-rounded img-center" style="width: 100%;" src="https://animalso.com/wp-content/uploads/2017/01/Golden-Retriever_6.jpg" data-holder-rendered="true">
+            <br/><br/>
+            <strong>作者</strong>: <span class="painting-painter">达芬奇</span><br/>
+            <strong>版权人</strong>: <span class="painting-owner">达芬奇</span><br/>
+            <button class="btn btn-default btn-buy" type="button" data-id="0">购买</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>--> 
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="layui/layui.js"></script>
+    <script src="js/test.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
