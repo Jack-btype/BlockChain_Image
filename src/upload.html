@@ -18,7 +18,22 @@
     <![endif]-->
   </head>
   <body>
-
+    <div class="layui-upload">
+      <button type="button" class="layui-btn" id="test1">上传图片</button>
+      <div class="layui-upload-list">
+        <img class="layui-upload-img" id="demo1">
+        <p id="demoText"></p>
+      </div>
+    </div>   
+    <div class="layui-tab-content">
+      <div class="layui-tab-item layui-show">
+        <form  action="/upload" method="POST" enctype="multipart/form-data">
+          <input id="select" type="file" name="image" size=50/>
+          <br />
+          <input class="layui-btn" type="submit" value="上传文件" />
+        </form>
+      </div>
+    </div>
    
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

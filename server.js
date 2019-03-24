@@ -9,6 +9,7 @@ var ExpressApp = {
 
         app.use(express.static('src'));
         app.use(express.static('img'));
+        app.use(express.static('imgUpload'));
 
         app.use(bodyParser.urlencoded( {extended: false}));
         app.use(multer( {dest: './imgUpload'}).array('image'));
@@ -33,7 +34,7 @@ var ExpressApp = {
                         };
                     }
                     console.log( response );
-                    res.end( JSON.stringify( response ) );
+                    res.sendFile(  __dirname + '/src/' + 'upload-success.html');
                 });
             });
         });
@@ -42,14 +43,9 @@ var ExpressApp = {
             var host = server.address().address;
             var port = server.address().port;
 
-            console.log("服务器运行在： http://%s:%s", host, port)
+            console.log("服务器运行在： http://%s:%s", host, port);
         })
-    },
-
-    post: function() {
-
     }
-
 }
 
 ExpressApp.init();
