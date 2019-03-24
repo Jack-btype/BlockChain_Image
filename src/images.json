@@ -1,0 +1,31 @@
+[
+    {
+      "id": 0,
+      "name": "向日葵",
+      "picture": "images/000.jpg",
+      "painter": "梵高",
+      "owner": "Admin"
+    },
+    {
+        "id": 1,
+        "name": "蒙娜丽莎",
+        "picture": "images/001.jpg",
+        "painter": "达·芬奇",
+        "owner": "Admin"
+      },
+      {
+        "id": 2,
+        "name": "拿破仑穿越阿尔卑斯山",
+        "picture": "images/002.jpg",
+        "painter": "达维特",
+        "owner": "Admin"
+      },
+      {
+        "id": 3,
+        "name": "盲女",
+        "picture": "images/003.jpg",
+        "painter": "约翰·埃·密莱",
+        "owner": "Admin"
+      }
+]
+  

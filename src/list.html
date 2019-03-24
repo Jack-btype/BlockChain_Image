@@ -18,7 +18,37 @@
     <![endif]-->
   </head>
   <body>
-
+    <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-8 col-sm-push-2">
+            <h1 class="text-center">显示图片</h1>
+            <hr/>
+            <br/>
+          </div>
+        </div>
+  
+        <div id="imagesRow" class="row">
+          <!-- PETS LOAD HERE -->
+        </div>
+      </div>
+  
+      <div id="imageTemplate" style="display: none;">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="panel panel-info panel-image">
+            <div class="panel-heading">
+              <h3 class="panel-title">向日葵</h3>
+            </div>
+            <div class="panel-body">
+              <img alt="140x140" data-src="holder.js/140x140" class="img-rounded img-center" style="width: 100%;" src="images/000.jpg" data-holder-rendered="true">
+              <br/><br/>
+              <strong>名称</strong>: <span class="image-name">向日葵</span><br/>
+              <strong>作者</strong>: <span class="image-painter">梵高</span><br/>
+              <strong>持有人</strong>: <span class="image-owner">Admin</span><br/><br/>
+              <button class="btn btn-default btn-buy" type="button" data-id="0">购买</button>
+            </div>
+          </div>
+        </div>
+      </div>
    
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -26,7 +56,6 @@
     <script src="js/web3.min.js"></script>
     <script src="js/truffle-contract.js"></script>
     <script src="layui/layui.js"></script>
-    <script src="js/upload-image.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/list-images.js"></script>
   </body>
 </html>
