@@ -65,10 +65,10 @@ App = {
         App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
       }
       web3 = new Web3(App.web3Provider);
+      
       // ！！！！！！！！！！！！！
       // ！！记得把这里取消注释！！
       // ！！！！！！！！！！！！！
-      
       //return App.initContract();
     },
   

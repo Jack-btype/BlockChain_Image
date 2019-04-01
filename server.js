@@ -19,7 +19,10 @@ var ExpressApp = {
         })
 
         app.post('/upload', function(req, res) {
-    
+            if (req.files[0] === undefined) {
+                console.log("there is no file was sent.")
+                res.end("there is no file was sent");
+            }
             console.log(req.files[0]);
         
             var des_file = __dirname + "/imgUpload/" + req.files[0].originalname;
